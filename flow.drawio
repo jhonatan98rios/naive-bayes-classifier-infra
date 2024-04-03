@@ -1,0 +1,195 @@
+<mxfile host="65bd71144e">
+    <diagram id="Z9ufKXO_uCubAd_U0I6a" name="Page-1">
+        <mxGraphModel dx="1523" dy="1033" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="900" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="4" style="edgeStyle=none;html=1;flowAnimation=1;" parent="1" source="2" target="16" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="490" y="220" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="2" value="&lt;font color=&quot;#faf3f2&quot;&gt;Events Queue&lt;/font&gt;" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;gradientColor=#FF4F8B;gradientDirection=north;fillColor=#BC1356;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.sqs;" parent="1" vertex="1">
+                    <mxGeometry x="360" y="200" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" style="edgeStyle=none;html=1;startArrow=classic;startFill=1;flowAnimation=1;" parent="1" source="8" target="10" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="" style="edgeStyle=none;html=1;startArrow=none;startFill=0;flowAnimation=1;" parent="1" source="8" target="18" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="Consumir&lt;br&gt;arquivo do S3" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="480" y="280" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="Raw Bucket" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.bucket_with_objects;fillColor=#E05243;gradientColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="360" y="280" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" style="edgeStyle=none;html=1;startArrow=none;startFill=0;flowAnimation=1;" parent="1" source="16" target="8" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="Consumir&lt;br&gt;evento" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="480" y="200" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="" style="edgeStyle=none;html=1;startArrow=none;startFill=0;flowAnimation=1;" parent="1" source="18" target="22" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="Quebrar dados entre treino e teste" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="480" y="360" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="" style="edgeStyle=none;html=1;startArrow=none;startFill=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;flowAnimation=1;" parent="1" source="22" target="260" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="Treinar modelo" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="480" y="440" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="" style="edgeStyle=none;html=1;startArrow=none;startFill=0;flowAnimation=1;" parent="1" source="24" target="26" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="Testar modelo com conjunto de teste" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="480" y="600" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="" style="edgeStyle=none;html=1;startArrow=none;startFill=0;flowAnimation=1;" parent="1" source="26" target="28" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" style="edgeStyle=none;html=1;entryX=0.06;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=classic;startFill=1;flowAnimation=1;" parent="1" source="26" target="30" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="Publicar arquivo de treino no S3" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="480" y="680" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" style="edgeStyle=none;html=1;startArrow=none;startFill=0;flowAnimation=1;" parent="1" source="28" target="35" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="Atualizar registro do banco de dados" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="480" y="760" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="Model Bucket" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.bucket_with_objects;fillColor=#E05243;gradientColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="680" y="680" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="Classifier DB" style="image;html=1;image=img/lib/clip_art/computers/Database_128x128.png" parent="1" vertex="1">
+                    <mxGeometry x="680" y="760" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="254" value="" style="edgeStyle=none;html=1;startArrow=none;startFill=0;flowAnimation=1;" parent="1" source="249" target="253" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="249" value="Receber dados e arquivo" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="160" y="200" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="252" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=none;startFill=0;flowAnimation=1;" parent="1" source="251" target="249" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="262" value="REST" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="252" vertex="1" connectable="0">
+                    <mxGeometry x="-0.2717" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="251" value="" style="sketch=0;html=1;dashed=0;whitespace=wrap;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];verticalLabelPosition=bottom;align=center;verticalAlign=top;shape=mxgraph.kubernetes.icon;prIcon=user" parent="1" vertex="1">
+                    <mxGeometry x="197.5" y="120" width="45" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="255" style="edgeStyle=none;html=1;entryX=0.06;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=none;startFill=0;flowAnimation=1;" parent="1" source="253" target="10" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="259" value="" style="edgeStyle=none;html=1;startArrow=none;startFill=0;flowAnimation=1;" parent="1" source="253" target="258" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="253" value="Publicar &lt;br&gt;arquivo no S3" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="160" y="280" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="264" style="edgeStyle=none;html=1;startArrow=none;startFill=0;flowAnimation=1;" parent="1" source="258" target="263" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="269" value="" style="edgeStyle=none;html=1;startArrow=none;startFill=0;flowAnimation=1;" parent="1" source="258" target="268" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="258" value="Criar registro no banco de dados" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="160" y="360" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="261" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=none;startFill=0;flowAnimation=1;" parent="1" source="260" target="24" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="260" value="Gerar arquivo de treino" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="480" y="520" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="263" value="Classifier DB" style="image;html=1;image=img/lib/clip_art/computers/Database_128x128.png" parent="1" vertex="1">
+                    <mxGeometry x="360" y="360" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="271" style="edgeStyle=none;html=1;startArrow=none;startFill=0;flowAnimation=1;" parent="1" source="268" target="270" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="268" value="Publicar evento na fila" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="160" y="440" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="270" value="&lt;font color=&quot;#fff5f5&quot;&gt;Events Queue&lt;/font&gt;" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;gradientColor=#FF4F8B;gradientDirection=north;fillColor=#BC1356;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.sqs;" parent="1" vertex="1">
+                    <mxGeometry x="360" y="440" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="273" value="Publish" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;fontColor=#FFF5F5;" parent="1" vertex="1">
+                    <mxGeometry x="160" y="40" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="274" value="Worker" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;fontColor=#FFF5F5;" parent="1" vertex="1">
+                    <mxGeometry x="480" y="40" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="275" value="API" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;fontColor=#FFF5F5;" parent="1" vertex="1">
+                    <mxGeometry x="800" y="40" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="276" value="" style="edgeStyle=none;html=1;startArrow=none;startFill=0;flowAnimation=1;" parent="1" source="277" target="282" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="277" value="Receber&lt;br&gt;input de texto e ID" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="800" y="200" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="278" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=none;startFill=0;flowAnimation=1;" parent="1" source="280" target="277" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="279" value="REST" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="278" vertex="1" connectable="0">
+                    <mxGeometry x="-0.2717" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="280" value="" style="sketch=0;html=1;dashed=0;whitespace=wrap;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];verticalLabelPosition=bottom;align=center;verticalAlign=top;shape=mxgraph.kubernetes.icon;prIcon=user" parent="1" vertex="1">
+                    <mxGeometry x="837.5" y="120" width="45" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="287" style="edgeStyle=none;html=1;fontColor=#FFF5F5;startArrow=classic;startFill=1;flowAnimation=1;" parent="1" source="282" target="286" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="289" value="" style="edgeStyle=none;html=1;fontColor=#FFF5F5;startArrow=none;startFill=0;flowAnimation=1;" parent="1" source="282" target="288" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="282" value="Consumir registro do banco de dados" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="800" y="280" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="286" value="Classifier DB" style="image;html=1;image=img/lib/clip_art/computers/Database_128x128.png" parent="1" vertex="1">
+                    <mxGeometry x="680" y="280" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="292" value="" style="edgeStyle=none;html=1;fontColor=#FFF5F5;startArrow=none;startFill=0;flowAnimation=1;" parent="1" source="288" target="291" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="293" value="" style="edgeStyle=none;html=1;fontColor=#FFF5F5;startArrow=classic;startFill=1;entryX=0.94;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;flowAnimation=1;" parent="1" source="288" target="290" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="750" y="390" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="288" value="Consumir &lt;br&gt;arquivo do S3" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="800" y="360" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="290" value="Model Bucket" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.bucket_with_objects;fillColor=#E05243;gradientColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="680" y="360" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="295" value="" style="edgeStyle=none;html=1;fontColor=#FFF5F5;startArrow=none;startFill=0;flowAnimation=1;" parent="1" source="291" target="294" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="291" value="Recuperar instancia do classificador" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="800" y="440" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="297" value="" style="edgeStyle=none;html=1;fontColor=#FFF5F5;startArrow=none;startFill=0;flowAnimation=1;" parent="1" source="294" target="296" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="294" value="Executar classificação" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="800" y="520" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="296" value="REST" style="sketch=0;html=1;dashed=0;whitespace=wrap;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];verticalLabelPosition=bottom;align=center;verticalAlign=top;shape=mxgraph.kubernetes.icon;prIcon=user" parent="1" vertex="1">
+                    <mxGeometry x="837.5" y="600" width="45" height="40" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
