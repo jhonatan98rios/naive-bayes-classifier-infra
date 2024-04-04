@@ -67,7 +67,7 @@ services:
     networks:
       - naive-bayes-classifier-network
 
-  # Runner Time Series Python
+  # Runner NUM Python
   naive-bayes-classifier-runner-py:
     restart: always
     ports:
@@ -82,16 +82,16 @@ services:
   # ==============================================
 
   # Worker NLP Node js
-  # naive-bayes-classifier-worker:
-  #   restart: always
-  #   build:
-  #     context: ../naive-bayes-classifier-worker
-  #   env_file:
-  #     - ../naive-bayes-classifier-worker/.env
-  #   networks:
-  #     - naive-bayes-classifier-network
+  naive-bayes-classifier-worker:
+    restart: always
+    build:
+      context: ../naive-bayes-classifier-worker
+    env_file:
+      - ../naive-bayes-classifier-worker/.env
+    networks:
+      - naive-bayes-classifier-network
 
-  # Worker Time Series Python
+  # Worker NUM Python
   naive-bayes-classifier-worker-py:
     restart: always
     build:
