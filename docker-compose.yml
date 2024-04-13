@@ -13,13 +13,13 @@ services:
   #   networks:
   #     - naive-bayes-classifier-network
 
+  # ==============================================
 
   nginx:
     image: nginx:latest
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf:ro
     depends_on:
-      - naive-bayes-classifier-publisher
       - naive-bayes-classifier-api
     ports:
       - "80:80"
@@ -28,30 +28,15 @@ services:
 
   # ==============================================
 
-  # Publisher Node js
-  naive-bayes-classifier-publisher:
-    restart: always
-    ports:
-      - "3001:3001"
-    build:
-      context: ../naive-bayes-classifier-publisher
-    env_file:
-      - ../naive-bayes-classifier-publisher/.env
-    networks:
-      - naive-bayes-classifier-network
-
-  # API Node js
+  # API Spring Boot
   naive-bayes-classifier-api:
     restart: always
     ports:
       - "3002:3002"
     build:
-      context: ../naive-bayes-classifier-api
-    env_file:
-      - ../naive-bayes-classifier-api/.env
+      context: ../naive-bayes-classifier-api-spring
     networks:
       - naive-bayes-classifier-network
-
 
   # ==============================================
 
@@ -68,7 +53,7 @@ services:
       - naive-bayes-classifier-network
 
   # Runner NUM Python
-  naive-bayes-classifier-runner-py:
+  naive-bayes-classifier-runner-num:
     restart: always
     ports:
       - "8000:8000"
@@ -82,25 +67,25 @@ services:
   # ==============================================
 
   # Worker NLP Node js
-  naive-bayes-classifier-worker:
+  naive-bayes-classifier-worker-nlp:
     restart: always
     build:
-      context: ../naive-bayes-classifier-worker
+      context: ../naive-bayes-classifier-worker-nlp
     env_file:
-      - ../naive-bayes-classifier-worker/.env
+      - ../naive-bayes-classifier-worker-nlp/.env
     networks:
       - naive-bayes-classifier-network
 
   # Worker NUM Python
-  naive-bayes-classifier-worker-py:
+  naive-bayes-classifier-worker-num:
     restart: always
     build:
-      context: ../naive-bayes-classifier-worker-py
+      context: ../naive-bayes-classifier-worker-num
     env_file:
-      - ../naive-bayes-classifier-worker-py/.env
+      - ../naive-bayes-classifier-worker-num/.env
     networks:
       - naive-bayes-classifier-network
-
+      
 
 networks:
   naive-bayes-classifier-network:
